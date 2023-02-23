@@ -4,8 +4,12 @@ import { data } from "./api";
 import { SvgItems } from "./SVGCOMPONET/SvgItems";
 
 const SvgAPI = () => {
+  
   const [svg, setsvg] = useState([]);
   const { query, setquery } = useContext(product);
+
+
+  // console.log(svg);
 
   useEffect(() => {
     setsvg(data);
@@ -31,7 +35,6 @@ const SvgAPI = () => {
           id=""
         />
       </div>
-
       <div>
         <SvgItems product={icon} />
       </div>

@@ -3,22 +3,22 @@ import { AiOutlineRead } from "react-icons/ai";
 
 export const Home = () => {
   return (
-    <div className="bg-gradient-to-bl from-blue-100 via-blue-300   to-blue-500 py-32 space-y-10 ">
-      <div className=" font-bold flex justify-center">
+    <div className="bg-gradient-to-bl from-blue-100 via-blue-300   to-blue-500 py-32 space-y-5 ">
+      <div className=" font-bold flex justify-center items-center">
         <button
           title="New in v5.3"
           className="  bg-yellow-200 mx-4 shadow-3xl rounded-md px-1  py-2 "
         >
           New in v5.3
         </button>
-        <h1 className="flex text-center text-white lg:text-black mt-1">
+        <h1 className=" text-white lg:text-black ">
            Color mode support, expanded color palette, and more!
         </h1>
       </div>
 
       <img
         title="Bootstrap"
-        className="w-1/2 lg:w-60 mt-5 mx-auto items-center flex-wrap"
+        className="w-1/2 lg:w-48 mt-5 mx-auto items-center flex-wrap"
         src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png"
         alt=""
       />
@@ -42,7 +42,7 @@ export const Home = () => {
           npm i bootstrap@5.3.0-alpha1
         </span>
         <div>
-          <button className="bg-violet-500 hover:bg-violet-700 py-2 lg:py-3 lg:px-8 rounded-lg list-none text-white px-32 font-bold ">
+          <button className="bg-violet-500 flex justify-center items-center hover:bg-violet-700 py-2 lg:py-3 lg:px-8 rounded-lg list-none text-white px-32 font-bold ">
             <div className="sm:flex hidden  ">
               <AiOutlineRead />
             </div>

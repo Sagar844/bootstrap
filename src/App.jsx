@@ -4,6 +4,7 @@ import { createContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import BootstrapIcons from "./Component/BootstrapIcons";
 import { HomeRouter } from "./HomeRouter";
+import { Navbar } from "./Component/Navbar";
 
 const data = createContext();
 const product = createContext();
@@ -17,6 +18,7 @@ function App() {
     <div>
       <data.Provider value={to}>
         <product.Provider value={quer}>
+        <Navbar />
           <Routes>
             <Route path="/" element={<HomeRouter />}></Route>
             <Route path="/icon" element={<BootstrapIcons />}></Route>
