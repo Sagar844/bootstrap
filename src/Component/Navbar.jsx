@@ -1,16 +1,23 @@
 import React, { useContext, useState } from "react";
-import { Spin as Hamburger } from "hamburger-react";
-import { Hanburger } from "./Hanburger";
-import { data } from "../App";
+
 import { Link } from "react-router-dom";
+import { dro } from "../App";
 import { VersionDrop } from "./VersionDrop";
 
 export const Navbar = () => {
-  const [drop, setdeop] = useState(false);
+  const { drop, setdeop } = useContext(dro);
+
+  const handle = (e) => {
+    if (e.target.id === "container") setdeop(false);
+  };
 
   return (
-    <div className="bg-violet-700  py-3 drop-shadow-2xl shadow-lg shadow-violet-500/50  fixed  right-0 left-0 ">
-      <nav className=" flex flex-wrap  items-center  justify-center  lg:justify-start  ">
+    <div className="bg-violet-700  py-3 drop-shadow-2xl shadow-lg shadow-violet-500/50   fixed  right-0 left-0 ">
+      <nav
+        id="container"
+        onClick={handle}
+        className=" flex flex-wrap  items-center  justify-center  lg:justify-start "
+      >
         <Link to="/">
           <img
             title="Bootstrap"
@@ -28,14 +35,14 @@ export const Navbar = () => {
           <h1>Themes</h1>
           <h1>Blog</h1>
         </div>
-        <div className="mx-auto mr-20  ">
+        <div className="mx-auto mr-20 sm:flex hidden ">
           <button onClick={() => setdeop(!drop)} className="text-white">
             v 5.3
           </button>
           <hr className=" " />
         </div>
       </nav>
-      {drop && <VersionDrop/>}
+      {drop && <VersionDrop />}
     </div>
   );
 };

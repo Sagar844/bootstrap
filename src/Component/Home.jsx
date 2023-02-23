@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AiOutlineRead } from "react-icons/ai";
+import { dro } from "../App";
+import { Docs } from "./Docs";
 
 export const Home = () => {
+
+
+  const { setdeop } = useContext(dro);
+
+  const handle = (e) => {
+    if (e.target.id === "container") setdeop(false);
+  };
+
   return (
-    <div className="bg-gradient-to-bl from-blue-100 via-blue-300   to-blue-500 py-32 space-y-5 ">
+    <div
+      id="container"
+      onClick={handle}
+      className="bg-gradient-to-bl from-blue-100 via-blue-300  to-blue-500 py-32 flex-wrap space-y-5  "
+    >
       <div className=" font-bold flex justify-center items-center">
         <button
           title="New in v5.3"
@@ -12,10 +26,9 @@ export const Home = () => {
           New in v5.3
         </button>
         <h1 className=" text-white lg:text-black ">
-           Color mode support, expanded color palette, and more!
+          Color mode support, expanded color palette, and more!
         </h1>
       </div>
-
       <img
         title="Bootstrap"
         className="w-1/2 lg:w-48 mt-5 mx-auto items-center flex-wrap"
@@ -37,12 +50,12 @@ export const Home = () => {
         </p>
       </div>
 
-      <div className=" flex justify-center   flex-col    mx-2 space-x-3 lg:flex-row ">
-        <span className="text-black lg:text-white lg:bg-slate-700   bg-gray-100 px-14 py-3 lg:px-20   rounded-lg  font-semibold before:content-['$'] ">
+      <div className=" flex justify-center flex-col mx-2 space-x-3 lg:flex-row  ">
+        <span className="text-black lg:text-white lg:bg-slate-700   bg-gray-100 px-10 py-5 lg:px-20   rounded-lg  font-semibold before:content-['$'] ">
           npm i bootstrap@5.3.0-alpha1
         </span>
         <div>
-          <button className="bg-violet-500 flex justify-center items-center hover:bg-violet-700 py-2 lg:py-3 lg:px-8 rounded-lg list-none text-white px-32 font-bold ">
+          <button className="bg-violet-500 flex justify-center  items-center hover:bg-violet-700 py-2 lg:py-5 lg:px-8 rounded-lg list-none text-white px-32 font-bold ">
             <div className="sm:flex hidden  ">
               <AiOutlineRead />
             </div>
@@ -50,22 +63,23 @@ export const Home = () => {
           </button>
         </div>
       </div>
-      <div className="font-bold flex justify-center">
+      <div className="font-bold flex justify-center " >
         <p>
           Currently v5.3.0-alpha1 ·
           <span>Download · v4.6.x docs · All releases</span>
         </p>
       </div>
-      <div className=" flex justify-center  bg-slate-600 mx-96 rounded-lg py-3">
+      <div className=" flex justify-center items-center bg-slate-600 mx-5 lg:hidden rounded-lg  py-2">
         <img
-          className="w-20 rounded-lg  mr-20 "
+          className="w-20 rounded-lg  mr-10 "
           src="https://cdn4.buysellads.net/uu/1/127419/1670532337-Stock2.jpg"
           alt=""
         />
         <h1 className="flex text-center text-white font-mono">
-          Get 10 Free Images From Adobe Stock. Start Now. ads via Carbon
+          Get 10 Free Images From Adobe Stock. Start Now. ads via Carbon 
         </h1>
       </div>
+      <Docs />
     </div>
   );
 };
