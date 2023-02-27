@@ -49,7 +49,7 @@ export const Chat = () => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="transform mx-20  py-48 px-20  rounded-l-lg bg-gradient-to-t from-green-200 to-green-500 opacity-1 shadow-4xl transition-all">
+              <Dialog.Panel className="transform mx-20  py-40 px-20  rounded-l-lg bg-gradient-to-t from-green-200 to-green-500 opacity-1 shadow-4xl transition-all">
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900"
