@@ -16,7 +16,7 @@ export const Home = () => {
     <div
       id="container"
       onClick={handle}
-      className="bg-gradient-to-bl from-blue-100 via-blue-300  to-blue-500 py-32 flex-wrap space-y-5  "
+      className="bg-black py-32 flex-wrap space-y-5  "
     >
       <div className=" font-bold flex justify-center items-center">
         <button
@@ -25,7 +25,7 @@ export const Home = () => {
         >
           New in v5.3
         </button>
-        <h1 className=" text-white lg:text-black ">
+        <h1 className=" text-white lg:text-white ">
           Color mode support, expanded color palette, and more!
         </h1>
       </div>
@@ -36,13 +36,13 @@ export const Home = () => {
         alt=""
       />
       <div className="flex text-center">
-        <h6 className="text-3xl lg:text-6xl font-bold mx-auto text-white  lg:text-black ">
+        <h6 className="text-3xl lg:text-6xl font-bold mx-auto text-white  lg:text-white ">
           Build fast, responsive sites <br />
           with Bootstrap
         </h6>
       </div>
       <div className=" flex-wrap  mt-5 space-y-2">
-        <p className="text-center text-xl   text-white lg:text-black font-semibold">
+        <p className="text-center text-xl   text-white lg:text-white font-semibold">
           Powerful, extensible, and feature-packed frontend toolkit. Build and
           <br />
           customize with Sass, utilize prebuilt grid system and components, and

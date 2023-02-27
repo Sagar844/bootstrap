@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
+import { dro } from "../App";
 import { IconData } from "./IconData";
 import { Navbar } from "./Navbar";
 
 const BootstrapIcons = () => {
+  const { setdeop} = useContext(dro);
+
+  const handle = (e) => {
+    if (e.target.id === "container") setdeop(false);
+  };
+
   return (
-    <div>
+    <div >
       <Navbar />
-      <div className=" bg-black py-32 flex flex-row-reverse grow-1 flex-wrap  justify-between  ">
+      <div
+          onClick={handle}
+          id="container"
+        className=" bg-black py-32 flex flex-row-reverse grow-1 flex-wrap  justify-between  "
+      >
         <img
           className="w-96 mx-10"
           src="https://icons.getbootstrap.com/assets/img/icons-hero@2x.png"
@@ -21,13 +32,20 @@ const BootstrapIcons = () => {
             Include them anyway you like—SVGs, SVG sprite, or web fonts.
             <br></br> Use them with or without Bootstrap in any project.
           </p>
-          <div className="flex flex-row space-x-2 ">
-            <span title="npm i bootstrap-icons" className="text-black lg:text-white lg:bg-slate-700   bg-gray-100 px-14 py-3  rounded-lg  font-semibold before:content-['$'] ">
+          <div className="flex flex-row space-x-4 ">
+            <span
+              title="npm i bootstrap-icons"
+              className="text-white lg:text-white lg:bg-slate-700   bg-gray-100 px-14 py-3  rounded-lg  font-semibold before:content-['$'] "
+            >
               npm i bootstrap-icons
             </span>
             <div>
-              <button title="Open in Figma" className=" hover:bg-white flex  items-center justify-center hover:text-black border-solid border-2 border-white px-5  py-3 rounded-lg list-none text-white  font-bold ">
-              
+              <a
+                href="https://www.figma.com/"
+                target={"_blank"}
+                title="Open in Figma"
+                className=" hover:bg-white flex transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-500 items-center justify-center hover:text-black border-solid border-2 border-white px-5  py-3 rounded-lg list-none text-white  font-bold "
+              >
                 <svg
                   className="w-5"
                   xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +70,7 @@ const BootstrapIcons = () => {
                   <circle cx="32" cy="24" r="7" fill="#29b6f6" />
                 </svg>{" "}
                 Open in Figma
-              </button>
+              </a>
             </div>
           </div>
         </div>

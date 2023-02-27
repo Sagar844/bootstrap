@@ -13,7 +13,7 @@ export const Footer = () => {
       <footer
         id="container"
         onClick={handle}
-        className="bg-gray-700 container flex-wrap py-40 flex space-x-32 text-white "
+        className="bg-gray-700  flex-wrap py-40 flex space-x-32 text-white "
       >
         <div className=" space-y-2 mx-8">
           <h1>Bootstrap</h1>

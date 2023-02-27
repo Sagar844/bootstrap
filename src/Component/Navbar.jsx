@@ -1,27 +1,21 @@
 import React, { useContext, useState } from "react";
 
 import { Link } from "react-router-dom";
-import { dro } from "../App";
+import { dro, hanlesui } from "../App";
+import MyModal from "./Mymodel";
 import { VersionDrop } from "./VersionDrop";
 
 export const Navbar = () => {
   const { drop, setdeop } = useContext(dro);
-
-  const handle = (e) => {
-    if (e.target.id === "container") setdeop(false);
-  };
+  const {isopen ,setIsOpen } = useContext(hanlesui);
 
   return (
-    <div className="bg-violet-700  py-3 drop-shadow-2xl shadow-lg shadow-violet-500/50   fixed  right-0 left-0 ">
-      <nav
-        id="container"
-        onClick={handle}
-        className=" flex flex-wrap  items-center  justify-center  lg:justify-start "
-      >
+    <div className=" bg-violet-700 py-3 fixed  right-0 left-0 ">
+      <nav className=" flex flex-wrap  items-center  justify-center  lg:justify-start ">
         <Link to="/">
           <img
             title="Bootstrap"
-            className="w-14  lg:w-14  mx-4 md:w-12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer"
+            className="w-14  lg:w-14  mx-4 md:w-12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-500 cursor-pointer"
             src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png
             
             "
@@ -36,13 +30,12 @@ export const Navbar = () => {
           <h1>Blog</h1>
         </div>
         <div className="mx-auto mr-20 sm:flex hidden ">
-          <button onClick={() => setdeop(!drop)} className="text-white">
+          <button onClick={() => setIsOpen(!isopen)} className="text-white">
             v 5.3
           </button>
           <hr className=" " />
         </div>
       </nav>
-      {drop && <VersionDrop />}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 export const Docs = () => {
   return (
-    <div className=" text-center mx-auto items-center ">
+    <div className=" text-center mx-auto items-center text-white ">
       <h6 className="text-2xl font-semibold ">
         Read our getting started guides
       </h6>

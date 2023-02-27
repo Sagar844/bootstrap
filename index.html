@@ -10,10 +10,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap . The most popular HTTP</title>
   </head>
-  <body>
+
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+    
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: forestgreen;
+  
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: yellow;
+    }
+  </style>
+
+
+
+  <body className="dark">
     <div id="root"></div>
     <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
       (function () {
@@ -25,7 +49,7 @@
         s1.setAttribute("crossorigin", "*");
         s0.parentNode.insertBefore(s1, s0);
       })();
-    </script>
+    </script> -->
     <!--End of Tawk.to Script-->
     <script type="module" src="/src/main.jsx"></script>
   </body>

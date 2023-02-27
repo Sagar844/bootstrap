@@ -3,20 +3,20 @@
 export const data = [
   {
     id: 1,
-    svg: "https://img.icons8.com/nolan/256/icons8-new-logo.png",
+    svg: "https://cdn.discordapp.com/attachments/1001168177952211054/1077954283309375518/icons8-purple-circle-48.png",
     name:"Gradient"
   },
   {
     id: 2,
   
-    svg: "https://img.icons8.com/material-outlined/1x/folder-invoices.png",
+    svg: "https://cdn.discordapp.com/attachments/1001168177952211054/1077954283309375518/icons8-purple-circle-48.png",
     name:"Folder"
   },
 
   {
     id: 3,
     name:"Gradient",
-    svg: "https://img.icons8.com/ios-glyphs/1x/opened-folder.png"
+    svg: "https://cdn.discordapp.com/attachments/1001168177952211054/1077954283309375518/icons8-purple-circle-48.png"
   },
   {
     id: 4,
